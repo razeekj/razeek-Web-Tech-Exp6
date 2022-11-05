@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script type ="text/javascript">
+            function change(lnk,evt)
+            {
+                if(evt.type == "mouseover")
+                {
+                    lnk.style.color = "red";
+                    lnk.style.fontSize = "28px";
+                }
+                else if(evt.type == "mouseout")
+                {
+                    lnk.style.color = "blue";
+                    lnk.style.fontSize = "20px";
+                }
+            }
+        </script> 
+        <script type ="text/javascript">
+            function changeImg(img,evt)
+            {
+                if(evt.type == "mouseover")
+                {
+                    img.style.height = "40px";
+                    img.style.width = "30px";
+                }
+                else if(evt.type == "mouseout")
+                {
+                    img.style.height = "30px";
+                    img.style.width = "20px";
+                }
+            }
+        </script> 
+        </head>
+        <body>
+                <asp:LinkButton ID="LinkButton1" runat="server" Font-Size ="20" onmouseover="change(this,event);" onmouseout="change(this,event);">
+                <p><h1>
+                    JavaScript, often abbreviated to JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022,
+                     98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries.
+                </p></h1>
+            </asp:LinkButton>
+                <asp:ImageButton ID="ImageButton1" runat="server"  ImageUrl ="~/images/1.JPG" onmouseover="changeImg(this,event);" onmouseout="changeImg(this,event);" />
+        
+        </body>
+</html>
